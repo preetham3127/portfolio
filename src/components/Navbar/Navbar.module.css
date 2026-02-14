@@ -1,0 +1,96 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.navContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLogo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: #00bfff;
+    transition: opacity 0.3s ease;
+}
+
+.navLogo:hover {
+    opacity: 0.8;
+}
+
+.navMenu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.navLink {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #cccccc;
+    transition: color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.navLink:hover {
+    color: #00bfff;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00bfff;
+    transition: width 0.3s ease;
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+    width: 100%;
+}
+
+.navLink.active {
+    color: #00bfff;
+}
+
+@media (max-width: 768px) {
+    .navMenu {
+        gap: 1.5rem;
+    }
+
+    .navLink {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navContainer {
+        padding: 1rem 1.5rem;
+    }
+
+    .navMenu {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+}

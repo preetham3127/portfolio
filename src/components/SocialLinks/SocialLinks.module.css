@@ -1,0 +1,52 @@
+.socialLinks {
+    position: fixed;
+    left: 2rem;
+    bottom: 0;
+    z-index: 999;
+}
+
+.socialLinksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.socialLink {
+    color: #cccccc;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.socialLink:hover {
+    color: #00bfff;
+}
+
+.socialLink svg {
+    width: 24px;
+    height: 24px;
+}
+
+.verticalLine {
+    width: 2px;
+    height: 100px;
+    background-color: #cccccc;
+    margin-top: 1rem;
+}
+
+/* Hide on mobile devices */
+@media (max-width: 768px) {
+    .socialLinks {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .socialLinks {
+        left: 1rem;
+    }
+}

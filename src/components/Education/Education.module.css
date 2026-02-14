@@ -1,0 +1,74 @@
+.educationSection {
+    background-color: #000000;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #00bfff;
+}
+
+.educationContent {
+    max-width: 700px;
+    margin: 3rem auto 0;
+    text-align: center;
+}
+
+.educationItem {
+    background-color: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.educationItem:hover {
+    border-color: #00bfff;
+}
+
+.educationInstitution {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+}
+
+.educationDegree {
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .educationItem {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .educationItem {
+        padding: 1.5rem;
+    }
+}
